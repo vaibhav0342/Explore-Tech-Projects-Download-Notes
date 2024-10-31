@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Projects & Notes</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-image: url('https://www.transparenttextures.com/patterns/white-paper.png'); /* Subtle pattern */
+            background-blend-mode: overlay; /* Blend gradient and pattern */
+        }
+        @keyframes backgroundColorChange {
+            0% { background-color: rgba(76, 175, 80, 0.9); }
+            25% { background-color: rgba(33, 150, 243, 0.9); }
+            50% { background-color: rgba(255, 193, 7, 0.9); }
+            75% { background-color: rgba(244, 67, 54, 0.9); }
+            100% { background-color: rgba(76, 175, 80, 0.9); }
+        }
+        header {
+            background-color: rgba(76, 175, 80, 0.9); /* Initial background color */
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease; /* Apply fade-in animation */
+            animation: backgroundColorChange 12s infinite; /* Apply color-changing animation */
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space between items */
+            align-items: center; /* Align items vertically centered */
+            padding: 1rem 2rem; /* Add padding for space */
+        }
+        header img {
+            border-radius: 50%; /* Make the profile photo circular */
+            width: 50px; /* Set width for profile photo */
+            height: 50px; /* Set height for profile photo */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* Start invisible */
+                transform: translateY(-20px); /* Move slightly up */
+            }
+            to {
+                opacity: 1; /* Fully visible */
+                transform: translateY(0); /* Move to original position */
+            }
+        }
+        footer {
+            background-color: rgba(76, 175, 80, 0.9); /* Semi-transparent footer background */
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 1rem;
+            padding: 1.5rem;
+            width: 100%;
+            max-width: 300px;
+            transition: transform 0.3s;
+            text-align: center;
+            opacity: 0; /* Start invisible for animation */
+            transform: translateY(20px); /* Start position for animation */
+        }
+        .card.visible {
+            opacity: 1; /* Fully visible */
+            transform: translateY(0); /* Move to original position */
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .download-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .download-link:hover {
+            background-color: #388E3C;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Explore Tech Projects & Downloadable Notes</h1>
+        </div>
+        <div style="text-align: right;">
+            <img src="images/about-me.png" alt="Profile Photo"> <!-- Replace with your image source -->
+            <div style="font-size: 1rem;">
+                <strong>Vaibhav Upare</strong><br>
+                Phone: +91 7083460474
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card fade-in">
+            <h2>Production Level CICD Pipeline Project</h2>
+            <img src="images/pipeline.png" alt="Pipeline Project Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/jenkins_projects.pdf" download class="download-link">Download CICD Pipeline Notes</a>
+        </div>
+
+        <div class="card fade-in">
+            <h2>Reusable Terraform Module for EC2 Instance</h2>
+            <img src="images/ec2-modules.jpeg" alt="Terraform Module Project Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/ec2-modules.pdf" download class="download-link">Download Terraform Notes</a>
+        </div>
+
+        <div class="card fade-in">
+            <h2>Build & Push Docker Image to DockerHub Using GitHub Actions</h2>
+            <img src="images/project-image.png.jpg" alt="Docker Project Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/docker_github_actions.pdf" download class="download-link">Download Docker Notes</a>
+        </div>
+
+        <div class="card fade-in">
+            <h2>Shell Scripting Guide</h2>
+            <img src="images/shell_scripting.jpeg" alt="Shell Scripting Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/Shell_Scripting.pdf" download class="download-link">Download Shell Scripting Notes</a>
+        </div>
+        <div class="card fade-in">
+            <h2>AWS Automation with Python Boto3 and Lambda Functions</h2>
+            <img src="images/boto3.jpg" alt="AWS Automation Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/Python_Boto3.pdf" download class="download-link">Download AWS Automation Notes</a>
+        </div>
+        <div class="card fade-in">
+            <h2>LINUX NOTES</h2>
+            <img src="images/LINUX-OS.jpg" alt="Linux Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/Linux.pdf" download class="download-link">Download Linux Notes</a>
+        </div>
+        <div class="card fade-in">
+            <h2>Linux InterviewQuestions</h2>
+            <img src="images/th.jpeg" alt="Linux Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/Linux InterviewQuestions_for_level_2_CloudBlitz (1).pdf" download class="download-link">Download Linux Notes</a>
+        </div>
+        <div class="card fade-in">
+            <h2>AWS InterviewQuestions</h2>
+            <img src="images/aws.jpeg" alt="Linux Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/AWS quetions 2.0.pdf" download class="download-link">Download Linux Notes</a>
+        </div>
+        <div class="card fade-in">
+            <h2>Trraform Notes</h2>
+            <img src="images/terraform.jpeg" alt="Linux Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/terraform.book.pdf" download class="download-link">Download Linux Notes</a>
+        </div>
+        <div class="card fade-in">
+            <h2>Kubernetes Notes</h2>
+            <img src="images/kubernetes.jpeg" alt="Linux Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/Kubernetes.pdf" download class="download-link">Download Linux Notes</a>
+        </div>
+        <div class="card fade-in">
+            <h2>How to Install and Configure Komiser</h2>
+            <img src="images/komiser.jpeg" alt="Linux Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/Komiser.pdf" download class="download-link">Download Linux Notes</a>
+        </div>
+        <div class="card fade-in">
+            <h2>Microservices and Monolithic Architecture</h2>
+            <img src="images/Microservices-Architecture-vs-Monolithic-Architecture.webp" alt="Linux Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/Microservices vs Monolithic.pdf" download class="download-link">Download Linux Notes</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Learning Platform | Tech Projects & Resources</p>
+    </footer>
+
+    <script>
+        const cards = document.querySelectorAll('.fade-in');
+
+        function checkScroll() {
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    card.classList.add('visible');
+                    gsap.fromTo(card, {
+                        y: 50, 
+                        opacity: 0 
+                    }, {
+                        duration: 1, 
+                        y: 0, 
+                        opacity: 1,
+                        ease: "power3.out"
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        // Initial check in case elements are already in view
+        checkScroll();
+    </script>
+</body>
+</html>
+
