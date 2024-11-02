@@ -2,9 +2,6 @@
 /*aminimation of header section */
 /* Base Styles for Hero Section */
 
-@media (max-width: 768px) {
-    /* Mobile specific styles */
-}
 
 .hero {
     position: relative;
