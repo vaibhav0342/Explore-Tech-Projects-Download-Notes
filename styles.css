@@ -11,7 +11,8 @@
     text-align: center;
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: white;
-    padding: 60px 20px;
+    width: 100%;
+    padding: 5%;;
 }
 
 /* Floating Animation for Profile Image */
