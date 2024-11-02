@@ -3,352 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Projects & Notes</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <style>
-      body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #f5f7fa, #c3cfe2);
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-image: url('https://www.transparenttextures.com/patterns/white-paper.png');
-            background-blend-mode: overlay;
-
-        }
-        @keyframes backgroundColorChange {
-            0% { background-color: rgba(76, 175, 80, 0.9); }
-            25% { background-color: rgba(33, 150, 243, 0.9); }
-            50% { background-color: rgba(255, 193, 7, 0.9); }
-            75% { background-color: rgba(244, 67, 54, 0.9); }
-            100% { background-color: rgba(76, 175, 80, 0.9); }
-        }
-        header {
-            background-color: rgba(76, 175, 80, 0.9); /* Initial background color */
-            color: white;
-            padding: 1.5rem 0;
-            text-align: center;
-            font-size: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease; /* Apply fade-in animation */
-            animation: backgroundColorChange 12s infinite; /* Apply color-changing animation */
-            display: flex; /* Use flexbox for layout */
-            justify-content: space-between; /* Space between items */
-            align-items: center; /* Align items vertically centered */
-            padding: 1rem 2rem; /* Add padding for space */
-
-        }
-        header img {
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            margin-right: 1rem;
-/* Set height for profile photo */
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0; /* Start invisible */
-                transform: translateY(-20px); /* Move slightly up */
-            }
-            to {
-                opacity: 1; /* Fully visible */
-                transform: translateY(0); /* Move to original position */
-            }
-        }
-        footer {
-            background-color: rgba(76, 175, 80, 0.9); /* Semi-transparent footer background */
-            color: white;
-            padding: 1.5rem 0;
-            text-align: center;
-            font-size: 1rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            padding: 1rem;
-        
-        }
-        .card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin: 1rem;
-            padding: 1.5rem;
-            width: 100%;
-            max-width: 300px;
-            transition: transform 0.3s;
-            text-align: center;
-            opacity: 0; /* Start invisible for animation */
-            transform: translateY(20px); /* Start position for animation */
-        }
-        .card.visible {
-            opacity: 1; /* Fully visible */
-            transform: translateY(0); /* Move to original position */
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
-        }
-        .card img {
-            width: 100%;
-            border-radius: 6px;
-            margin-bottom: 1rem;
-        }
-        .download-link {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: rgba(76, 175, 80, 0.9); /* Initial color */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    animation: colorCycle 12s infinite; /* Apply synchronized color-changing animation */
-}
-
-/* Define the keyframes for synchronized color-cycling animation */
-@keyframes colorCycle {
-    0% { background-color: rgba(76, 175, 80, 0.9); } /* Green */
-    25% { background-color: rgba(33, 150, 243, 0.9); } /* Blue */
-    50% { background-color: rgba(255, 193, 7, 0.9); } /* Yellow */
-    75% { background-color: rgba(244, 67, 54, 0.9); } /* Red */
-    100% { background-color: rgba(76, 175, 80, 0.9); } /* Back to Green */
- 
-}
-.tools-section {
-            text-align: left;
-            margin: 2rem 0;
-        }
-        footer {
-            background-color: rgba(76, 175, 80, 0.9);
-            color: white;
-            padding: 1.5rem 0;
-            text-align: center;
-            font-size: 1rem;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            animation: fadeIn 0.5s ease-in-out; /* Add fade-in effect */
-        }
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .footer-links {
-            margin-bottom: 1rem;
-        }
-        .footer-links a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-            position: relative; /* Needed for the underline effect */
-            transition: color 0.3s; /* Smooth color transition */
-        }
-        .footer-links a::after {
-            content: ''; /* Create a pseudo-element */
-            position: absolute;
-            left: 0;
-            bottom: -2px; /* Position below the text */
-            width: 100%;
-            height: 2px; /* Thickness of the underline */
-            background-color: #ffd600; /* Underline color */
-            transform: scaleX(0); /* Initially scale to 0 */
-            transition: transform 0.3s ease; /* Smooth transition for the scale */
-        }
-        .footer-links a:hover::after {
-            transform: scaleX(1); /* Scale to full width on hover */
-    </style>
+    <title>Explore Tech Projects & Downloadable Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <div>
-            <h1>Explore Tech Projects & Downloadable Notes</h1>
-            <div class="tools-section">
-                <p align="left"> 
-                    <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> 
-                    </a>
-                    <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> 
-                        <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> 
-                    </a>
-                    <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> 
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> 
-                    </a>
-                    <a href="https://cloud.google.com" target="_blank" rel="noreferrer"> 
-                        <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/> 
-                    </a>
-                    <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> 
-                        <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> 
-                    </a>
-                    <a href="https://grafana.com" target="_blank" rel="noreferrer"> 
-                        <img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" alt="grafana" width="40" height="40"/> 
-                    </a>
-                    <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> 
-                    </a>
-                    <a href="https://www.jenkins.io" target="_blank" rel="noreferrer"> 
-                        <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="jenkins" width="40" height="40"/> 
-                    </a>
-                    <a href="https://kubernetes.io" target="_blank" rel="noreferrer"> 
-                        <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="kubernetes" width="40" height="40"/> 
-                    </a>
-                    <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> 
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> 
-                    </a>
-                    <a href="https://mariadb.org/" target="_blank" rel="noreferrer"> 
-                        <img src="https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg" alt="mariadb" width="40" height="40"/> 
-                    </a>
-                    <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> 
-                        <img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" alt="mysql" width="40" height="40"/> 
-                    </a>
-                    <a href="https://www.oracle.com/database/" target="_blank" rel="noreferrer"> 
-                        <img src="https://www.vectorlogo.zone/logos/oracle/oracle-icon.svg" alt="oracle" width="40" height="40"/> 
-                    </a>
-                    <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer"> 
-                        <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" alt="postgresql" width="40" height="40"/> 
-                    </a>
-                    <a href="https://www.python.org/" target="_blank" rel="noreferrer"> 
-                        <img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="python" width="40" height="40"/> 
-                    </a>
-                    <a href="https://www.ruby-lang.org/en/" target="_blank" rel="noreferrer"> 
-                        <img src="https://www.vectorlogo.zone/logos/ruby-lang/ruby-lang-icon.svg" alt="ruby" width="40" height="40"/> 
-                    </a>
-                    
-            </div>
+
+<!-- Hero Section -->
+<header class="hero">
+    <div class="hero-content">
+        <div class="profile">
+            <img src="images/about-me.png" alt="Profile Photo" class="profile-photo">
+            <h2 class="name">Vaibhav Upare</h2> <!-- Add your name here -->
         </div>
-        <div style="text-align: right;">
-            <img src="images/about-me.png" alt="Profile Photo"> <!-- Replace with your image source -->
-            <div style="font-size: 1rem;">
-                <strong>Vaibhav Upare</strong><br>
-            </div>
+        <h1>Explore Cutting-Edge Tech Projects & Downloadable Notes</h1>
+        <p>Your one-stop hub for hands-on projects and in-depth tech guides.</p>
+        <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">Explore Projects</a>
+            <a href="#notes" class="btn btn-secondary">Download Notes</a>
+            <a href="https://vaibhav0342.github.io/portfolio/" class="btn btn-profile">Portfolio</a> <!-- Added Portfolio button -->
         </div>
-    </header>
+    </div>
+</header>
+
+<section class="features" id="features">
+    <h2>Featured Technologies</h2>
+    <div class="tools-section">
+        <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="tech-icon" />
+        </a>
+        <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="Bash" class="tech-icon" />
+        </a>
+        <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="Docker" class="tech-icon" />
+        </a>
+        <a href="https://cloud.google.com" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="Google Cloud" class="tech-icon" />
+        </a>
+        <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git" class="tech-icon" />
+        </a>
+        <a href="https://grafana.com" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" alt="Grafana" class="tech-icon" />
+        </a>
+        <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML5" class="tech-icon" />
+        </a>
+        <a href="https://www.jenkins.io" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="Jenkins" class="tech-icon" />
+        </a>
+        <a href="https://kubernetes.io" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="Kubernetes" class="tech-icon" />
+        </a>
+        <a href="https://www.linux.org/" target="_blank" rel="noreferrer">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" class="tech-icon" />
+        </a>
+        <a href="https://mariadb.org/" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg" alt="MariaDB" class="tech-icon" />
+        </a>
+        <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" alt="MySQL" class="tech-icon" />
+        </a>
+        <a href="https://www.oracle.com/database/" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/oracle/oracle-icon.svg" alt="Oracle" class="tech-icon" />
+        </a>
+        <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" alt="PostgreSQL" class="tech-icon" />
+        </a>
+        <a href="https://www.python.org/" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="Python" class="tech-icon" />
+        </a>
+        <a href="https://www.ruby-lang.org/en/" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/ruby-lang/ruby-lang-icon.svg" alt="Ruby" class="tech-icon" />
+        </a>
+    </div>
+</section>
+
+
+<!-- Projects Section -->
+<section class="projects" id="projects">
+    <h1>My Tech Projects</h1>
 
     <div class="container">
         <div class="card fade-in">
-            <h2>Production Level CICD Pipeline Project</h2>
+            <h2>Production Level CI/CD Pipeline Project</h2>
             <img src="images/pipeline.png" alt="Pipeline Project Image">
             <p>Access the course notes here:</p>
-            <a href="notes/jenkins_projects.pdf" download class="download-link">Download-link</a>
+            <a href="notes/jenkins_projects.pdf" download class="btn btn-secondary">Download Link</a>
         </div>
-
         <div class="card fade-in">
             <h2>Reusable Terraform Module for EC2 Instance</h2>
             <img src="images/ec2-modules.jpeg" alt="Terraform Module Project Image">
             <p>Access the course notes here:</p>
-            <a href="notes/ec2-modules.pdf" download class="download-link">Download-link</a>
+            <a href="notes/ec2-modules.pdf" download class="btn btn-secondary">Download Link</a>
         </div>
-
         <div class="card fade-in">
             <h2>Build & Push Docker Image to DockerHub Using GitHub Actions</h2>
             <img src="images/project-image.png.jpg" alt="Docker Project Image">
             <p>Access the course notes here:</p>
-            <a href="notes/docker_github_actions.pdf" download class="download-link">Download-link</a>
+            <a href="notes/docker_github_actions.pdf" class="btn btn-secondary">Download Link</a>
         </div>
-
-        <div class="card fade-in">
-            <h2>Shell Scripting Guide</h2>
-            <img src="images/shell_scripting.jpeg" alt="Shell Scripting Image">
-            <p>Access the course notes here:</p>
-            <a href="notes/Shell_Scripting.pdf" download class="download-link">Download-link</a>
-        </div>
+       
         <div class="card fade-in">
             <h2>AWS Automation with Python Boto3 and Lambda Functions</h2>
             <img src="images/boto3.jpg" alt="AWS Automation Image">
             <p>Access the course notes here:</p>
-            <a href="notes/Python_Boto3.pdf" download class="download-link">Download-link</a>
+            <a href="notes/Python_Boto3.pdf" download class="btn btn-secondary">Download Link</a>
         </div>
         <div class="card fade-in">
             <h2>LINUX NOTES</h2>
             <img src="images/LINUX-OS.jpg" alt="Linux Image">
             <p>Access the course notes here:</p>
-            <a href="notes/Linux.pdf" download class="download-link">Download-link</a>
+            <a href="notes/Linux.pdf" download class="btn btn-secondary">Download Link</a>
         </div>
-        <div class="card fade-in">
-            <h2>Linux InterviewQuestions</h2>
-            <img src="images/th.jpeg" alt="Linux Image">
-            <p>Access the course notes here:</p>
-            <a href="notes/Linux InterviewQuestions_for_level_2_CloudBlitz (1).pdf" download class="download-link">Download-link</a>
-        </div>
-        <div class="card fade-in">
-            <h2>AWS InterviewQuestions</h2>
-            <img src="images/aws.jpeg" alt="Linux Image">
-            <p>Access the course notes here:</p>
-            <a href="notes/AWS quetions 2.0.pdf" download class="download-link">Download-link</a>
-        </div>
-        <div class="card fade-in">
-            <h2>Trraform Notes</h2>
-            <img src="images/terraform.jpeg" alt="Linux Image">
-            <p>Access the course notes here:</p>
-            <a href="notes/terraform.book.pdf" download class="download-link">Download-link</a>
-        </div>
-        <div class="card fade-in">
-            <h2>Kubernetes Notes</h2>
-            <img src="images/kubernetes.jpeg" alt="Linux Image">
-            <p>Access the course notes here:</p>
-            <a href="notes/Kubernetes.pdf" download class="download-link">Download-link</a>
-        </div>
+        
         <div class="card fade-in">
             <h2>How to Install and Configure Komiser</h2>
-            <img src="images/komiser.jpeg" alt="Linux Image">
+            <img src="images/komiser.jpeg" alt="Komiser Image">
             <p>Access the course notes here:</p>
-            <a href="notes/Komiser.pdf" download class="download-link">Download-link</a>
+            <a href="notes/Komiser.pdf" download class="btn btn-secondary" download>Download Link</a>
+        </div>
+    </div>
+</section>
+<section class="notes" id="notes">
+    <h2 class="Download-title" > Downloadable Notes</h2>
+<input type="text" placeholder="Search notes..." class="search-bar" onkeyup="filterNotes()">
+    <div class="container">
+        <div class="card fade-in">
+            <h2>Kubernetes Notes</h2>
+            <img src="images/kubernetes.jpeg" alt="Kubernetes Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/Kubernetes.pdf" download class="btn btn-primary" download>Download PDF</a>
+        </div>
+        <div class="card fade-in">
+            <h2>Terraform Notes</h2>
+            <img src="images/terraform.jpeg" alt="Terraform Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/terraform.book.pdf" download class="btn btn-primary" download>Download PDF</a>
+        </div>
+        <div class="card fade-in">
+            <h2>AWS Interview Questions</h2>
+            <img src="images/aws.jpeg" alt="AWS Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/AWS questions 2.0.pdf" download class="btn btn-primary" download>Download PDF</a>
+        </div>
+        <div class="card fade-in">
+            <h2>Linux Interview Questions</h2>
+            <img src="images/th.jpeg" alt="Linux Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/Linux InterviewQuestions_for_level_2_CloudBlitz (1).pdf" download class="btn btn-primary" download>Download PDF</a>
+        </div>
+        <div class="card fade-in">
+            <h2>Shell Scripting Guide</h2>
+            <img src="images/shell_scripting.jpeg" alt="Shell Scripting Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/Shell_Scripting.pdf" download class="btn btn-primary" download>Download PDF</a>
         </div>
         <div class="card fade-in">
             <h2>Microservices and Monolithic Architecture</h2>
-            <img src="images/Microservices-Architecture-vs-Monolithic-Architecture.webp" alt="Linux Image">
+            <img src="images/Microservices-Architecture-vs-Monolithic-Architecture.webp" alt="Architecture Image">
             <p>Access the course notes here:</p>
-            <a href="notes/Microservices vs Monolithic.pdf" download class="download-link">Download-link</a>
+            <a href="notes/Microservices vs Monolithic.pdf" download class="btn btn-primary" download>Download PDF</a>
         </div>
     </div>
+</section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/vaibhav-upare" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a href="https://github.com/vaibhav0342" target="_blank" rel="noreferrer">GitHub</a>
-                <a href="mailto:vaibhavupare757@gmail.com" target="_blank" rel="noreferrer">Email</a>
-                <a href="tel:7083460474" target="_blank" rel="noreferrer">Contact</a>
-                <a href="https://instagram.com/27vaibhav10" target="_blank" rel="noreferrer">instagram</a>
-                <a href="https://vaibhav342.hashnode.dev/" target="_blank" rel="noreferrer">hashnode</a>
-            </div>
-            <p>© 2024 Vaibhav Upare. All rights reserved.</p>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/vaibhav-upare" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/vaibhav0342" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="mailto:vaibhavupare757@gmail.com" target="_blank" rel="noreferrer">Email</a>
+            <a href="tel:7083460474" target="_blank" rel="noreferrer">Contact</a>
+            <a href="https://instagram.com/27vaibhav10" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://vaibhav342.hashnode.dev/" target="_blank" rel="noreferrer">Hashnode</a>
         </div>
-    </footer>
+        <p>© 2024 Vaibhav Upare❤️. All rights reserved.</p>
+    </div>
+</footer>
 
+<script>
+    const cards = document.querySelectorAll('.fade-in');
 
-    <script>
-        const cards = document.querySelectorAll('.fade-in');
+    function checkScroll() {
+        cards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                card.classList.add('visible');
+                gsap.fromTo(card, {
+                    y: 50, 
+                    opacity: 0 
+                }, {
+                    duration: 1, 
+                    y: 0, 
+                    opacity: 1,
+                    ease: "power3.out"
+                });
+            }
+        });
+    }
 
-        function checkScroll() {
-            cards.forEach(card => {
-                const rect = card.getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
-                    card.classList.add('visible');
-                    gsap.fromTo(card, {
-                        y: 50, 
-                        opacity: 0 
-                    }, {
-                        duration: 1, 
-                        y: 0, 
-                        opacity: 1,
-                        ease: "power3.out"
-                    });
-                }
-            });
-        }
+    window.addEventListener('scroll', checkScroll);
+    // Initial check in case elements are already in view
+    checkScroll();
+</script>
 
-        window.addEventListener('scroll', checkScroll);
-        // Initial check in case elements are already in view
-        checkScroll();
-    </script>
 </body>
 </html>
+
+
+
+
 
