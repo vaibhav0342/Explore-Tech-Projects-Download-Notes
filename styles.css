@@ -1,9 +1,39 @@
 
 /*aminimation of header section */
 /* Base Styles for Hero Section */
-
-
 .hero {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 40px 20px; /* Adjusted padding */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px 10px; /* Further reduce for mobile */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem; /* Smaller heading for mobile */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Smaller paragraph size */
+    }
+}
+
+.profile-photo {
+    width: 80px; /* Adjusted size */
+    height: 80px; /* Adjusted size */
+}
+
+
+/*.hero {
     position: relative;
     display: flex;
     align-items: center;
