@@ -1,7 +1,6 @@
 
 /*aminimation of header section */
-/* Base Styles for Hero Section */
- <style>
+   <style>
         /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
@@ -19,9 +18,18 @@
             justify-content: center; /* Center the content vertically */
             text-align: center;
             padding: 60px 20px;     /* Adjust padding for mobile */
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            animation: changeBackground 12s infinite; /* Animation for background color */
             color: white;
             overflow: hidden; /* Prevent content from overflowing */
+        }
+
+        /* Background Color Animation */
+        @keyframes changeBackground {
+            0% { background-color: #1e1e2f; }
+            25% { background-color: #2a2a4d; }
+            50% { background-color: #3b3b5c; }
+            75% { background-color: #4c4c70; }
+            100% { background-color: #1e1e2f; } /* Loop back to the start color */
         }
 
         /* Floating Animation for Profile Image */
