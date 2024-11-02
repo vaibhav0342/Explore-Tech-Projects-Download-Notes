@@ -1,0 +1,217 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #121212; /* Dark background */
+  color: #ffffff; /* Set text color to white for visibility */
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Space below profile section */
+}
+
+.profile-photo {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes the image circular */
+  margin-bottom: 10px; /* Space between image and name */
+}
+
+.name {
+  color: white; /* White text for the name */
+  font-size: 1.5rem; /* Adjust font size as needed */
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://example.com/hero-background.jpg') no-repeat center center/cover; /* Replace with your image */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.btn-profile {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.btn-profile:hover {
+  background-color: #45a049;
+}
+.btn-primary {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+}
+
+.btn-secondary {
+  background-color: #008CBA; /* Blue */
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #007bb5;
+}
+
+/* Features Section */
+.features {
+  padding: 40px 20px;
+  background-color: #ffffff; /* Background color for the section */
+  text-align: center; /* Center the text */
+}
+
+.features h2 {
+  font-size: 2rem; /* Font size for the heading */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.tools-section {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the icons horizontally */
+  flex-wrap: wrap; /* Allow wrapping to new lines */
+  gap: 20px; /* Space between icons */
+}
+
+.tech-icon {
+  width: 40px; /* Fixed width for icons */
+  height: 40px; /* Fixed height for icons */
+  transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for icons */
+.tech-icon:hover {
+  transform: translateY(-10px) scale(1.1); /* Move up and scale on hover */
+}
+
+/* Optional: Keyframes for floating animation */
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0); /* Start and end position */
+  }
+  50% {
+      transform: translateY(-5px); /* Move up slightly */
+  }
+}
+
+/* Apply the floating animation to all icons */
+.tech-icon {
+  animation: float 3s ease-in-out infinite; /* Infinite loop animation */
+}
+
+
+/* Container for cards */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-links {
+  margin: 15px 0;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: white;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffd600; /* Underline hover color */
+}
+
+
+
+
+
+
+
+
+
+.notes {
+  padding: 40px 20px;
+  background-color: #f0f4f8; /* Light background for the notes section */
+  text-align: center;
+}
+
+.notes h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.project-title {
+  color: white; /* Set the text color to white */
+  text-align: left; /* Center the title */
+  margin-bottom: 25px; /* Space below the title */
+}
+h2 {
+  color: black; /* Set the text color to black */
+}
+
