@@ -6,6 +6,7 @@
     <title>Explore Tech Projects & Downloadable Notes</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+   
 </head>
 <body>
 
@@ -17,7 +18,7 @@
             <img src="images/about-me.png" alt="Profile photo of Vaibhav Upare" class="profile-photo" loading="lazy">
             <h2 class="name fade-in">Vaibhav Upare</h2>
         </div>
-        
+
         <!-- Main Heading without Typing Effect -->
         <h1 class="fade-in">Explore Cutting-Edge Tech Projects & Downloadable Notes</h1>
         
@@ -28,11 +29,10 @@
         <div class="hero-cta fade-in-delay">
             <a href="#projects" class="btn btn-primary" aria-label="Explore Projects">Explore Projects</a>
             <a href="#notes" class="btn btn-secondary" aria-label="Download Notes">Download Notes</a>
-            <a href="https://vaibhav0342.github.io/portfolio/" class="btn btn-profile" target="_blank" rel="noopener noreferrer" aria-label="Visit Vaibhav's Portfolio">Portfolio</a>
+            
         </div>
     </div>
 </header>
-
 <section class="features" id="features">
     <h2>Featured Technologies</h2>
     <div class="tools-section">
@@ -87,7 +87,6 @@
     </div>
 </section>
 
-
 <!-- Projects Section -->
 <section class="projects" id="projects">
     <h1>My Tech Projects</h1>
@@ -118,12 +117,6 @@
             <p>Access the course notes here:</p>
             <a href="notes/Python_Boto3.pdf" download class="btn btn-secondary">Download Link</a>
         </div>
-        <div class="card fade-in">
-            <h2>LINUX NOTES</h2>
-            <img src="images/LINUX-OS.jpg" alt="Linux Image">
-            <p>Access the course notes here:</p>
-            <a href="notes/Linux.pdf" download class="btn btn-secondary">Download Link</a>
-        </div>
         
         <div class="card fade-in">
             <h2>How to Install and Configure Komiser</h2>
@@ -153,7 +146,7 @@
             <h2>AWS Interview Questions</h2>
             <img src="images/aws.jpeg" alt="AWS Image">
             <p>Access the course notes here:</p>
-            <a href="notes/AWS questions 2.0.pdf" download class="btn btn-primary" download>Download PDF</a>
+            <a href="notes/AWS-quetions.pdf" download class="btn btn-primary" download>Download PDF</a>
         </div>
         <div class="card fade-in">
             <h2>Linux Interview Questions</h2>
@@ -166,6 +159,12 @@
             <img src="images/shell_scripting.jpeg" alt="Shell Scripting Image">
             <p>Access the course notes here:</p>
             <a href="notes/Shell_Scripting.pdf" download class="btn btn-primary" download>Download PDF</a>
+        </div>
+        <div class="card fade-in">
+            <h2>LINUX NOTES</h2>
+            <img src="images/LINUX-OS.jpg" alt="Linux Image">
+            <p>Access the course notes here:</p>
+            <a href="notes/Linux.pdf" download class="btn btn-primary" download>Download PDF</a>
         </div>
         <div class="card fade-in">
             <h2>Microservices and Monolithic Architecture</h2>
@@ -188,40 +187,12 @@
             <a href="https://instagram.com/27vaibhav10" target="_blank" rel="noreferrer">Instagram</a>
             <a href="https://vaibhav342.hashnode.dev/" target="_blank" rel="noreferrer">Hashnode</a>
         </div>
-        <p>© 2024 Vaibhav Upare❤️. All rights reserved.</p>
+        <p>© 2024 Vaibhav Upare❤. All rights reserved.</p>
     </div>
 </footer>
 
-<script>
-    const cards = document.querySelectorAll('.fade-in');
 
-    function checkScroll() {
-        cards.forEach(card => {
-            const rect = card.getBoundingClientRect();
-            if (rect.top < window.innerHeight) {
-                card.classList.add('visible');
-                gsap.fromTo(card, {
-                    y: 50, 
-                    opacity: 0 
-                }, {
-                    duration: 1, 
-                    y: 0, 
-                    opacity: 1,
-                    ease: "power3.out"
-                });
-            }
-        });
-    }
-
-    window.addEventListener('scroll', checkScroll);
-    // Initial check in case elements are already in view
-    checkScroll();
-</script>
+<!-- Add More Sections as Needed -->
 
 </body>
 </html>
-
-
-
-
-
